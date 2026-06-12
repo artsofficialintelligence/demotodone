@@ -9,7 +9,6 @@ import {
 import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
-import { siteConfig } from "@/lib/site";
 import { spotifyTracks, soundcloudPlaylist } from "@/lib/work";
 
 export const metadata: Metadata = {
@@ -82,23 +81,25 @@ export default function AboutPage() {
               <p>
                 My background is in songwriting and creative direction — understanding
                 structure, knowing what a lyric needs, hearing when an arrangement
-                serves the song versus when it gets in the way. I&rsquo;ve developed
-                a production workflow built around AI tools that lets me translate
-                that into finished, release-quality audio without a traditional DAW
-                setup.
+                serves the song versus when it gets in the way. Whether you bring me
+                a rough demo, a voice memo, a lyric sheet, a melody, or just the spark
+                of an idea, that&rsquo;s the foundation I build from.
               </p>
               <p>
-                What that means in practice: you get professional results, fast,
-                at a price point that reflects the way I work. What doesn&rsquo;t
-                change is the creative judgment — that&rsquo;s entirely mine.
-                I listen to everything you send, shape the direction, make the
-                calls on what sounds right, and keep going until the track
-                actually matches your vision.
+                To bring it to life, I work with cutting-edge music production
+                technology and AI-assisted creative tools — exploring arrangements,
+                sounds, and melodies to find what fits each project. Every track is
+                carefully guided through a process of selection, refinement, editing,
+                arrangement, and quality control, so what comes out the other end
+                feels intentional and finished, not generated.
               </p>
               <p>
-                {siteConfig.name} exists because most people with a great song
-                idea have no clear path to a finished track. This is that path —
-                handled personally, from your first message to the final file.
+                Technology helps me move fast. What doesn&rsquo;t change is the
+                creative judgment — that&rsquo;s entirely mine. I listen to
+                everything you send, shape the direction, make the calls on what
+                sounds right, and keep refining until the track actually matches
+                your vision. From demo to done: turning an unfinished idea into a
+                song worth hearing.
               </p>
             </div>
           </div>
