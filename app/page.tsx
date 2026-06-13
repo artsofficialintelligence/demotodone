@@ -14,8 +14,6 @@ import {
   Gift,
   BookOpen,
   Radio,
-  Quote,
-  Star,
 } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
@@ -95,27 +93,6 @@ const services = [
     icon: Radio,
     title: "Business jingles",
     body: "Memorable, professional jingles for brands, ads, and marketing — built to stick in your audience's head.",
-  },
-];
-
-const testimonials = [
-  {
-    quote:
-      "I sent a voice memo I recorded in my car and a paragraph about my dad. What came back genuinely made my family cry. Worth every penny.",
-    name: "Placeholder Client",
-    detail: "Personalized gift song",
-  },
-  {
-    quote:
-      "Had a demo stuck at 70% for two years. The finished version sounds like the song I always heard in my head but couldn't reach.",
-    name: "Placeholder Client",
-    detail: "Finished an unfinished demo",
-  },
-  {
-    quote:
-      "Clear communication, fast turnaround, and the production quality is genuinely premium. Already planning my next project.",
-    name: "Placeholder Client",
-    detail: "Custom vocal song",
   },
 ];
 
@@ -335,41 +312,6 @@ export default function HomePage() {
             </Link>
           </div>
         </Reveal>
-      </section>
-
-      {/* ─────────────────── Social proof (placeholder) ───────── */}
-      <section className="container-page py-20 sm:py-24">
-        <SectionHeading
-          eyebrow="Social proof"
-          title="What people say"
-          description="Placeholder testimonials — swap these for real client quotes as your projects roll in."
-        />
-        <div className="mt-14 grid gap-5 lg:grid-cols-3">
-          {testimonials.map((t, i) => (
-            <Reveal key={i} delay={i * 100}>
-              <figure className="card card-hover flex h-full flex-col p-6">
-                <Quote className="h-7 w-7 text-brand/40" />
-                <blockquote className="mt-4 flex-1 text-sm leading-relaxed text-slate-300">
-                  &ldquo;{t.quote}&rdquo;
-                </blockquote>
-                <figcaption className="mt-6 border-t border-white/[0.06] pt-4">
-                  <div className="flex gap-0.5">
-                    {Array.from({ length: 5 }).map((_, s) => (
-                      <Star
-                        key={s}
-                        className="h-3.5 w-3.5 fill-brand-light text-brand-light"
-                      />
-                    ))}
-                  </div>
-                  <p className="mt-2 text-sm font-medium text-white">
-                    {t.name}
-                  </p>
-                  <p className="text-xs text-slate-500">{t.detail}</p>
-                </figcaption>
-              </figure>
-            </Reveal>
-          ))}
-        </div>
       </section>
 
       {/* ─────────────────────── FAQ preview ──────────────────── */}
