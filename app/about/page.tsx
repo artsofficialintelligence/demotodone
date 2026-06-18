@@ -9,6 +9,7 @@ import {
 import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
+import SpotifyGrid from "@/components/SpotifyGrid";
 import { spotifyTracks, soundcloudPlaylist } from "@/lib/work";
 
 export const metadata: Metadata = {
@@ -110,21 +111,8 @@ export default function AboutPage() {
             title="Hear what's possible"
             description="A selection of finished tracks — each one started as a rough idea, a voice note, or a concept."
           />
-          <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {spotifyTracks.map((embedUrl, i) => (
-              <Reveal key={embedUrl} delay={(i % 6) * 60}>
-                <iframe
-                  title={`Track ${i + 1}`}
-                  src={embedUrl}
-                  width="100%"
-                  height="152"
-                  style={{ borderRadius: "12px" }}
-                  frameBorder="0"
-                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                  loading="lazy"
-                />
-              </Reveal>
-            ))}
+          <div className="mt-14">
+            <SpotifyGrid tracks={spotifyTracks} />
           </div>
 
           {/* SoundCloud playlist */}

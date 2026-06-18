@@ -20,6 +20,7 @@ import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
 import FaqAccordion from "@/components/FaqAccordion";
 import Waveform from "@/components/Waveform";
+import SpotifyGrid from "@/components/SpotifyGrid";
 import { faqs } from "@/lib/faq";
 import { spotifyTracks } from "@/lib/work";
 
@@ -44,7 +45,7 @@ const steps = [
   {
     icon: MessagesSquare,
     title: "We connect via email",
-    body: "We talk through the vision, scope, timeline, and a clear fixed quote before any work begins.",
+    body: "We talk through the vision, scope, timeline, and a clear quote before any work begins.",
   },
   {
     icon: Sparkles,
@@ -147,7 +148,7 @@ export default function HomePage() {
                 </span>
                 <span className="flex items-center gap-2">
                   <span className="h-1.5 w-1.5 rounded-full bg-[#533afd]" />
-                  Fixed quote before we start
+                  Quote before we start
                 </span>
               </div>
             </Reveal>
@@ -279,21 +280,8 @@ export default function HomePage() {
           title="Hear what's possible"
           description="A few examples of finished tracks — each one started as a rough idea, a voice note, or a concept."
         />
-        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {spotifyTracks.slice(0, 6).map((embedUrl, i) => (
-            <Reveal key={embedUrl} delay={i * 90}>
-              <iframe
-                title={`Track ${i + 1}`}
-                src={embedUrl}
-                width="100%"
-                height="152"
-                style={{ borderRadius: "12px" }}
-                frameBorder="0"
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy"
-              />
-            </Reveal>
-          ))}
+        <div className="mt-14">
+          <SpotifyGrid tracks={spotifyTracks} maxTracks={6} />
         </div>
         <Reveal delay={120}>
           <div className="mt-8 text-center">
