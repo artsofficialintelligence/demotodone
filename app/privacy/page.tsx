@@ -15,16 +15,16 @@ export default function PrivacyPage() {
   return (
     <section className="container-page py-20 sm:py-24">
       <div className="mx-auto max-w-3xl">
-        <p className="text-sm font-medium text-brand-light">Legal</p>
+        <p className="text-sm font-medium text-[#111111]">Legal</p>
         <h1 className="mt-2 text-4xl font-semibold tracking-tight sm:text-5xl">
           Privacy Policy
         </h1>
-        <p className="mt-3 text-sm text-slate-500">
+        <p className="mt-3 text-sm text-[#707072]/70">
           Last updated: {lastUpdated}
         </p>
 
-        <div className="mt-6 rounded-xl border border-amber-500/20 bg-amber-500/5 p-4 text-sm text-amber-200/80">
-          <strong className="font-semibold text-amber-200">
+        <div className="mt-6 rounded-xl border border-amber-500/20 bg-amber-500/5 p-4 text-sm text-amber-700/80">
+          <strong className="font-semibold text-amber-700">
             Template notice:
           </strong>{" "}
           This page is a starting template. Before you launch, review and adapt
@@ -32,9 +32,9 @@ export default function PrivacyPage() {
           practices and complies with the laws that apply to you.
         </div>
 
-        <div className="legal-prose mt-10 space-y-8 text-sm leading-relaxed text-slate-400 sm:text-[15px]">
+        <div className="legal-prose mt-10 space-y-8 text-sm leading-relaxed text-[#707072] sm:text-[15px]">
           <div>
-            <h2 className="text-lg font-semibold text-white">
+            <h2 className="text-lg font-semibold text-[#111111]">
               1. Information you provide
             </h2>
             <p className="mt-2">
@@ -47,7 +47,7 @@ export default function PrivacyPage() {
           </div>
 
           <div>
-            <h2 className="text-lg font-semibold text-white">
+            <h2 className="text-lg font-semibold text-[#111111]">
               2. How your information is used
             </h2>
             <p className="mt-2">
@@ -59,7 +59,7 @@ export default function PrivacyPage() {
           </div>
 
           <div>
-            <h2 className="text-lg font-semibold text-white">
+            <h2 className="text-lg font-semibold text-[#111111]">
               3. How your information is handled
             </h2>
             <p className="mt-2">
@@ -73,7 +73,7 @@ export default function PrivacyPage() {
           </div>
 
           <div>
-            <h2 className="text-lg font-semibold text-white">
+            <h2 className="text-lg font-semibold text-[#111111]">
               4. Third-party services
             </h2>
             <p className="mt-2">
@@ -86,7 +86,7 @@ export default function PrivacyPage() {
           </div>
 
           <div>
-            <h2 className="text-lg font-semibold text-white">
+            <h2 className="text-lg font-semibold text-[#111111]">
               5. Cookies &amp; analytics
             </h2>
             <p className="mt-2">
@@ -97,7 +97,7 @@ export default function PrivacyPage() {
           </div>
 
           <div>
-            <h2 className="text-lg font-semibold text-white">
+            <h2 className="text-lg font-semibold text-[#111111]">
               6. Data retention
             </h2>
             <p className="mt-2">
@@ -109,7 +109,7 @@ export default function PrivacyPage() {
           </div>
 
           <div>
-            <h2 className="text-lg font-semibold text-white">7. Your choices</h2>
+            <h2 className="text-lg font-semibold text-[#111111]">7. Your choices</h2>
             <p className="mt-2">
               You can request access to, correction of, or deletion of the
               personal information you have shared by emailing the studio. You
@@ -119,7 +119,7 @@ export default function PrivacyPage() {
           </div>
 
           <div>
-            <h2 className="text-lg font-semibold text-white">
+            <h2 className="text-lg font-semibold text-[#111111]">
               8. Children&rsquo;s privacy
             </h2>
             <p className="mt-2">
@@ -131,7 +131,7 @@ export default function PrivacyPage() {
           </div>
 
           <div>
-            <h2 className="text-lg font-semibold text-white">
+            <h2 className="text-lg font-semibold text-[#111111]">
               9. Changes to this policy
             </h2>
             <p className="mt-2">
@@ -142,7 +142,7 @@ export default function PrivacyPage() {
           </div>
 
           <div>
-            <h2 className="text-lg font-semibold text-white">10. Contact</h2>
+            <h2 className="text-lg font-semibold text-[#111111]">10. Contact</h2>
             <p className="mt-2">
               For any privacy questions or requests, email{" "}
               <a
@@ -156,7 +156,7 @@ export default function PrivacyPage() {
           </div>
         </div>
 
-        <p className="mt-12 text-sm text-slate-500">
+        <p className="mt-12 text-sm text-[#707072]/70">
           See also our{" "}
           <Link href="/terms" className="link-underline">
             Terms of Service

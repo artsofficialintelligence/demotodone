@@ -82,7 +82,7 @@ export default function PricingPage() {
       <section className="relative overflow-hidden">
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-0 bg-hero-glow"
+          className="pointer-events-none absolute inset-0"
         />
         <div className="container-page relative py-20 text-center sm:py-24">
           <Reveal className="mx-auto max-w-2xl items-center">
@@ -92,9 +92,9 @@ export default function PricingPage() {
             </span>
             <h1 className="mt-6 text-4xl font-semibold leading-[1.1] tracking-tight sm:text-5xl">
               Every song is{" "}
-              <span className="gradient-text">quoted to fit</span>.
+              <span className="underline decoration-[#cacacb] underline-offset-4">quoted to fit</span>.
             </h1>
-            <p className="mt-6 text-lg leading-relaxed text-slate-400">
+            <p className="mt-6 text-lg leading-relaxed text-[#707072]">
               Custom work doesn&rsquo;t fit neatly into a price sticker — scope,
               length, revisions, and how finished your starting material is all
               shape the cost. Pick the package that sounds closest, submit your
@@ -112,26 +112,26 @@ export default function PricingPage() {
               <div
                 className={`relative flex h-full flex-col rounded-2xl border p-7 transition-all duration-300 sm:p-8 ${
                   pkg.featured
-                    ? "border-brand/50 bg-ink-850 shadow-glow"
+                    ? "border-[#111111] bg-[#f5f5f5] "
                     : "card card-hover"
                 }`}
               >
                 {pkg.featured && (
-                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-brand-gradient px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white shadow-glow">
+                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-[#111111] px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white ">
                     Most popular
                   </span>
                 )}
-                <h2 className="font-display text-xl font-semibold text-white">
+                <h2 className="font-display text-xl font-semibold text-[#111111]">
                   {pkg.name}
                 </h2>
-                <p className="mt-1 text-sm text-brand-light">{pkg.tagline}</p>
+                <p className="mt-1 text-sm text-[#111111]">{pkg.tagline}</p>
 
                 <div className="mt-5 flex items-baseline gap-2">
-                  <span className="font-display text-3xl font-bold text-white">
+                  <span className="font-display text-3xl font-bold text-[#111111]">
                     Custom quote
                   </span>
                 </div>
-                <p className="mt-2 text-xs leading-relaxed text-slate-500">
+                <p className="mt-2 text-xs leading-relaxed text-[#707072]/70">
                   {pkg.bestFor}
                 </p>
 
@@ -145,15 +145,15 @@ export default function PricingPage() {
                   <ArrowRight className="h-4 w-4" />
                 </Link>
 
-                <ul className="mt-7 space-y-3 border-t border-white/[0.07] pt-7">
+                <ul className="mt-7 space-y-3 border-t border-[#cacacb] pt-7">
                   {pkg.features.map((feature) => (
                     <li key={feature} className="flex gap-3 text-sm">
-                      <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-brand-light" />
+                      <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-[#111111]" />
                       <span
                         className={
                           feature.endsWith("plus:")
-                            ? "font-medium text-slate-200"
-                            : "text-slate-400"
+                            ? "font-medium text-[#111111]"
+                            : "text-[#707072]"
                         }
                       >
                         {feature}
@@ -172,22 +172,22 @@ export default function PricingPage() {
         <Reveal>
           <div className="card p-7 sm:p-9">
             <div className="flex items-center gap-3">
-              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-gradient">
+              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#111111]">
                 <MessageSquareQuote className="h-5 w-5 text-white" />
               </span>
-              <h2 className="text-xl font-semibold text-white sm:text-2xl">
+              <h2 className="text-xl font-semibold text-[#111111] sm:text-2xl">
                 Included with every package
               </h2>
             </div>
             <div className="mt-6 grid gap-3 sm:grid-cols-2">
               {includedEverywhere.map((item) => (
-                <div key={item} className="flex gap-3 text-sm text-slate-300">
-                  <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-brand-light" />
+                <div key={item} className="flex gap-3 text-sm text-[#111111]/80">
+                  <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-[#111111]" />
                   {item}
                 </div>
               ))}
             </div>
-            <p className="mt-6 text-sm leading-relaxed text-slate-500">
+            <p className="mt-6 text-sm leading-relaxed text-[#707072]/70">
               Note: package names and inclusions are a starting framework — your
               final quote is tailored to your actual project. Not sure which
               tier fits? Just submit your idea and I&rsquo;ll recommend the

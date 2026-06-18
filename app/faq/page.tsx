@@ -38,7 +38,7 @@ export default function FaqPage() {
       <section className="relative overflow-hidden">
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-0 bg-hero-glow"
+          className="pointer-events-none absolute inset-0"
         />
         <div className="container-page relative py-20 text-center sm:py-24">
           <Reveal className="mx-auto max-w-2xl items-center">
@@ -48,9 +48,9 @@ export default function FaqPage() {
             </span>
             <h1 className="mt-6 text-4xl font-semibold leading-[1.1] tracking-tight sm:text-5xl">
               Everything you might be{" "}
-              <span className="gradient-text">wondering</span>.
+              <span className="underline decoration-[#cacacb] underline-offset-4">wondering</span>.
             </h1>
-            <p className="mt-6 text-lg leading-relaxed text-slate-400">
+            <p className="mt-6 text-lg leading-relaxed text-[#707072]">
               If your question isn&rsquo;t here, the contact page is one click
               away — I&rsquo;m happy to talk it through before you submit
               anything.

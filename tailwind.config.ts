@@ -9,38 +9,45 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        // Nike-inspired palette
+        canvas: "#ffffff",
+        "soft-cloud": "#f5f5f5",
+        hairline: "#cacacb",
         ink: {
-          950: "#07070c",
-          900: "#0b0b12",
-          850: "#101019",
-          800: "#15151f",
-          750: "#1b1b27",
-          700: "#23232f",
+          // Remapped to light surfaces so existing class names still resolve
+          950: "#ffffff",   // body bg (was near-black)
+          900: "#f5f5f5",   // alt section bg (was dark card)
+          850: "#ffffff",   // card bg
+          800: "#f5f5f5",
+          750: "#e5e5e5",
+          700: "#cacacb",   // hairline
+          DEFAULT: "#111111",
+          charcoal: "#39393b",
+          mute: "#707072",
         },
         brand: {
-          DEFAULT: "#8b5cf6",
-          light: "#a78bfa",
-          dark: "#7c3aed",
-          glow: "#c084fc",
+          DEFAULT: "#111111",  // Nike black as primary
+          light: "#39393b",    // charcoal
+          dark: "#111111",
+          glow: "transparent",
         },
         accent: {
-          DEFAULT: "#d946ef",
-          light: "#e879f9",
+          DEFAULT: "#111111",
+          light: "#39393b",
         },
       },
       fontFamily: {
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],
-        display: ["var(--font-display)", "system-ui", "sans-serif"],
+        display: ["var(--font-inter)", "system-ui", "sans-serif"],
+        campaign: ["var(--font-campaign)", "Impact", "sans-serif"],
       },
       backgroundImage: {
-        "brand-gradient":
-          "linear-gradient(135deg, #8b5cf6 0%, #d946ef 100%)",
-        "hero-glow":
-          "radial-gradient(60% 60% at 50% 0%, rgba(139,92,246,0.18) 0%, rgba(217,70,239,0.06) 45%, rgba(7,7,12,0) 80%)",
+        "brand-gradient": "linear-gradient(135deg, #111111 0%, #39393b 100%)",
+        "hero-glow": "none",
       },
       boxShadow: {
-        glow: "0 0 0 1px rgba(139,92,246,0.25), 0 20px 60px -15px rgba(139,92,246,0.35)",
-        card: "0 12px 40px -12px rgba(0,0,0,0.6)",
+        glow: "none",
+        card: "none",
       },
       keyframes: {
         "fade-up": {

@@ -49,7 +49,7 @@ export default function AboutPage() {
       <section className="relative overflow-hidden">
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-0 bg-hero-glow"
+          className="pointer-events-none absolute inset-0"
         />
         <div className="container-page relative py-20 sm:py-28">
           <Reveal className="max-w-3xl">
@@ -59,9 +59,9 @@ export default function AboutPage() {
             </span>
             <h1 className="mt-6 text-4xl font-semibold leading-[1.1] tracking-tight sm:text-5xl">
               A creative ear and the tools{" "}
-              <span className="gradient-text">to finish the job right</span>.
+              <span className="underline decoration-[#cacacb] underline-offset-4">to finish the job right</span>.
             </h1>
-            <p className="mt-6 text-lg leading-relaxed text-slate-400">
+            <p className="mt-6 text-lg leading-relaxed text-[#707072]">
               I understand music — structure, arrangement, what makes something
               feel right. I have the background and the tools to bring it to life,
               and the results speak for themselves.
@@ -71,13 +71,14 @@ export default function AboutPage() {
       </section>
 
       {/* Story */}
-      <section className="container-page pb-8 sm:pb-12">
+      <section className="border-b border-[#cacacb] bg-[#f5f5f5]">
+        <div className="container-page py-16 sm:py-20">
         <Reveal>
-          <div className="card p-7 sm:p-9 max-w-3xl">
-            <h2 className="text-2xl font-semibold text-white sm:text-3xl">
+          <div className="max-w-3xl">
+            <h2 className="text-2xl font-semibold sm:text-3xl">
               About me
             </h2>
-            <div className="mt-5 space-y-4 text-sm leading-relaxed text-slate-400 sm:text-base">
+            <div className="mt-5 space-y-4 text-sm leading-relaxed text-[#707072] sm:text-base">
               <p>
                 I have a background in songwriting, production, performing in bands,
                 and audio work. I understand how songs are built, what a lyric needs,
@@ -98,10 +99,11 @@ export default function AboutPage() {
             </div>
           </div>
         </Reveal>
+        </div>
       </section>
 
       {/* Work samples */}
-      <section id="work" className="border-y border-white/[0.06] bg-ink-900/40">
+      <section id="work" className="border-y border-[#cacacb]">
         <div className="container-page py-20 sm:py-24">
           <SectionHeading
             eyebrow="My work"
@@ -128,7 +130,7 @@ export default function AboutPage() {
           {/* SoundCloud playlist */}
           <Reveal delay={120} className="mt-10">
             <div className="card p-6 sm:p-7">
-              <h3 className="mb-4 text-lg font-medium text-white">
+              <h3 className="mb-4 text-lg font-medium text-[#111111]">
                 {soundcloudPlaylist.title}
               </h3>
               <iframe
@@ -141,12 +143,12 @@ export default function AboutPage() {
                 src={soundcloudPlaylist.embedUrl}
                 style={{ borderRadius: "12px" }}
               />
-              <div className="mt-2 truncate text-xs text-slate-500">
+              <div className="mt-2 truncate text-xs text-[#707072]">
                 <a
                   href={soundcloudPlaylist.profileUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-slate-400 hover:text-brand-light"
+                  className="text-[#707072] hover:text-[#111111]"
                 >
                   {soundcloudPlaylist.profileName}
                 </a>{" "}
@@ -155,7 +157,7 @@ export default function AboutPage() {
                   href={soundcloudPlaylist.playlistUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-slate-400 hover:text-brand-light"
+                  className="text-[#707072] hover:text-[#111111]"
                 >
                   {soundcloudPlaylist.title}
                 </a>
@@ -176,14 +178,14 @@ export default function AboutPage() {
           {values.map((value, i) => (
             <Reveal key={value.title} delay={(i % 2) * 100}>
               <div className="card card-hover flex h-full gap-5 p-6">
-                <span className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl border border-brand/20 bg-brand/10">
-                  <value.icon className="h-5 w-5 text-brand-light" />
+                <span className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl border border-[#cacacb] bg-[#f5f5f5]">
+                  <value.icon className="h-5 w-5 text-[#111111]" />
                 </span>
                 <div>
-                  <h3 className="text-lg font-medium text-white">
+                  <h3 className="text-lg font-medium">
                     {value.title}
                   </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-slate-400">
+                  <p className="mt-2 text-sm leading-relaxed text-[#707072]">
                     {value.body}
                   </p>
                 </div>

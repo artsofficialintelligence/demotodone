@@ -21,22 +21,12 @@ export default function CTASection({
 }: CTASectionProps) {
   return (
     <section className="container-page py-20 sm:py-28">
-      <Reveal className="relative overflow-hidden rounded-3xl border border-white/[0.08] bg-ink-850 px-6 py-14 text-center sm:px-12 sm:py-20">
-        {/* Glow accents */}
-        <div
-          aria-hidden
-          className="pointer-events-none absolute -left-24 -top-24 h-64 w-64 rounded-full bg-brand/20 blur-3xl"
-        />
-        <div
-          aria-hidden
-          className="pointer-events-none absolute -bottom-24 -right-16 h-64 w-64 rounded-full bg-accent/20 blur-3xl"
-        />
-
-        <div className="relative mx-auto max-w-2xl">
+      <Reveal className="overflow-hidden border border-[#cacacb] bg-[#f5f5f5] px-6 py-14 text-center sm:px-12 sm:py-20">
+        <div className="mx-auto max-w-2xl">
           <h2 className="text-3xl font-semibold leading-tight tracking-tight sm:text-4xl">
             {title}
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-slate-400 sm:text-lg">
+          <p className="mt-4 text-base leading-relaxed text-[#707072] sm:text-lg">
             {description}
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">

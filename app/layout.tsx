@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Space_Grotesk } from "next/font/google";
+import { Inter, Bebas_Neue } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/lib/site";
 import Navbar from "@/components/Navbar";
@@ -11,11 +11,11 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-const display = Space_Grotesk({
+const campaign = Bebas_Neue({
   subsets: ["latin"],
   display: "swap",
-  weight: ["500", "600", "700"],
-  variable: "--font-display",
+  weight: "400",
+  variable: "--font-campaign",
 });
 
 export const metadata: Metadata = {
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport = {
-  themeColor: "#07070c",
+  themeColor: "#ffffff",
   width: "device-width",
   initialScale: 1,
 };
@@ -91,7 +91,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${display.variable}`}>
+    <html lang="en" className={`${inter.variable} ${campaign.variable}`}>
       <body className="min-h-screen font-sans">
         <script
           type="application/ld+json"
