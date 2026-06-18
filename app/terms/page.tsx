@@ -15,11 +15,11 @@ export default function TermsPage() {
   return (
     <section className="container-page py-20 sm:py-24">
       <div className="mx-auto max-w-3xl">
-        <p className="text-sm font-medium text-[#111111]">Legal</p>
+        <p className="text-sm font-medium text-[#0d253d]">Legal</p>
         <h1 className="mt-2 text-4xl font-semibold tracking-tight sm:text-5xl">
           Terms of Service
         </h1>
-        <p className="mt-3 text-sm text-[#707072]/70">
+        <p className="mt-3 text-sm text-[#64748d]/70">
           Last updated: {lastUpdated}
         </p>
 
@@ -32,9 +32,9 @@ export default function TermsPage() {
           jurisdiction and business setup.
         </div>
 
-        <div className="legal-prose mt-10 space-y-8 text-sm leading-relaxed text-[#707072] sm:text-[15px]">
+        <div className="legal-prose mt-10 space-y-8 text-sm leading-relaxed text-[#64748d] sm:text-[15px]">
           <div>
-            <h2 className="text-lg font-semibold text-[#111111]">1. Overview</h2>
+            <h2 className="text-lg font-semibold text-[#0d253d]">1. Overview</h2>
             <p className="mt-2">
               {siteConfig.name} (&ldquo;{siteConfig.name},&rdquo; &ldquo;I,&rdquo;
               &ldquo;me,&rdquo; or &ldquo;the studio&rdquo;) provides custom song
@@ -45,7 +45,7 @@ export default function TermsPage() {
           </div>
 
           <div>
-            <h2 className="text-lg font-semibold text-[#111111]">
+            <h2 className="text-lg font-semibold text-[#0d253d]">
               2. Nature of the service
             </h2>
             <p className="mt-2">
@@ -58,7 +58,7 @@ export default function TermsPage() {
           </div>
 
           <div>
-            <h2 className="text-lg font-semibold text-[#111111]">
+            <h2 className="text-lg font-semibold text-[#0d253d]">
               3. Submissions &amp; project intake
             </h2>
             <p className="mt-2">
@@ -71,7 +71,7 @@ export default function TermsPage() {
           </div>
 
           <div>
-            <h2 className="text-lg font-semibold text-[#111111]">
+            <h2 className="text-lg font-semibold text-[#0d253d]">
               4. Quotes, scope &amp; payment
             </h2>
             <p className="mt-2">
@@ -84,7 +84,7 @@ export default function TermsPage() {
           </div>
 
           <div>
-            <h2 className="text-lg font-semibold text-[#111111]">
+            <h2 className="text-lg font-semibold text-[#0d253d]">
               5. Revisions &amp; delivery
             </h2>
             <p className="mt-2">
@@ -99,7 +99,7 @@ export default function TermsPage() {
           </div>
 
           <div>
-            <h2 className="text-lg font-semibold text-[#111111]">
+            <h2 className="text-lg font-semibold text-[#0d253d]">
               6. Ownership &amp; usage rights
             </h2>
             <p className="mt-2">
@@ -113,7 +113,7 @@ export default function TermsPage() {
           </div>
 
           <div>
-            <h2 className="text-lg font-semibold text-[#111111]">
+            <h2 className="text-lg font-semibold text-[#0d253d]">
               7. Use of production tools
             </h2>
             <p className="mt-2">
@@ -125,7 +125,7 @@ export default function TermsPage() {
           </div>
 
           <div>
-            <h2 className="text-lg font-semibold text-[#111111]">
+            <h2 className="text-lg font-semibold text-[#0d253d]">
               8. Cancellations &amp; refunds
             </h2>
             <p className="mt-2">
@@ -137,7 +137,7 @@ export default function TermsPage() {
           </div>
 
           <div>
-            <h2 className="text-lg font-semibold text-[#111111]">
+            <h2 className="text-lg font-semibold text-[#0d253d]">
               9. Limitation of liability
             </h2>
             <p className="mt-2">
@@ -149,7 +149,7 @@ export default function TermsPage() {
           </div>
 
           <div>
-            <h2 className="text-lg font-semibold text-[#111111]">
+            <h2 className="text-lg font-semibold text-[#0d253d]">
               10. Changes to these terms
             </h2>
             <p className="mt-2">
@@ -160,7 +160,7 @@ export default function TermsPage() {
           </div>
 
           <div>
-            <h2 className="text-lg font-semibold text-[#111111]">11. Contact</h2>
+            <h2 className="text-lg font-semibold text-[#0d253d]">11. Contact</h2>
             <p className="mt-2">
               Questions about these terms can be sent to{" "}
               <a
@@ -174,7 +174,7 @@ export default function TermsPage() {
           </div>
         </div>
 
-        <p className="mt-12 text-sm text-[#707072]/70">
+        <p className="mt-12 text-sm text-[#64748d]/70">
           See also our{" "}
           <Link href="/privacy" className="link-underline">
             Privacy Policy

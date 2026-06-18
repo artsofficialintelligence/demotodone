@@ -100,7 +100,7 @@ export default function HomePage() {
   return (
     <>
       {/* ───────────────────────── Hero ───────────────────────── */}
-      <section className="relative overflow-hidden border-b border-[#cacacb]">
+      <section className="relative overflow-hidden border-b border-[#e3e8ee] bg-hero-mesh">
         <div className="container-page relative grid items-center gap-12 py-20 sm:py-28 lg:grid-cols-12 lg:gap-8 lg:py-32">
           <div className="lg:col-span-7">
             <Reveal>
@@ -112,12 +112,12 @@ export default function HomePage() {
             <Reveal delay={80}>
               <h1 className="mt-6 text-4xl font-semibold leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl">
                 Turn your{" "}
-                <span className="underline decoration-[#cacacb] underline-offset-4">song idea</span>{" "}
+                <span className="underline decoration-[#e3e8ee] underline-offset-4">song idea</span>{" "}
                 into reality.
               </h1>
             </Reveal>
             <Reveal delay={160}>
-              <p className="mt-6 max-w-xl text-lg leading-relaxed text-[#707072]">
+              <p className="mt-6 max-w-xl text-lg leading-relaxed text-[#64748d]">
                 Send your lyrics, demos, voice notes, or rough ideas. I handle
                 the production from start to finish — shaping, refining, and
                 delivering every detail until it&rsquo;s exactly right. Fast,
@@ -136,17 +136,17 @@ export default function HomePage() {
               </div>
             </Reveal>
             <Reveal delay={320}>
-              <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-[#707072]">
+              <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-[#64748d]">
                 <span className="flex items-center gap-2">
-                  <span className="h-1.5 w-1.5 rounded-full bg-[#111111]" />
+                  <span className="h-1.5 w-1.5 rounded-full bg-[#533afd]" />
                   Professionally produced
                 </span>
                 <span className="flex items-center gap-2">
-                  <span className="h-1.5 w-1.5 rounded-full bg-[#111111]" />
+                  <span className="h-1.5 w-1.5 rounded-full bg-[#533afd]" />
                   Every project handled personally
                 </span>
                 <span className="flex items-center gap-2">
-                  <span className="h-1.5 w-1.5 rounded-full bg-[#111111]" />
+                  <span className="h-1.5 w-1.5 rounded-full bg-[#533afd]" />
                   Fixed quote before we start
                 </span>
               </div>
@@ -158,18 +158,18 @@ export default function HomePage() {
             <div className="card p-7">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-sm font-semibold text-[#111111]">
+                  <p className="text-sm font-semibold text-[#0d253d]">
                     Now in production
                   </p>
-                  <p className="text-xs text-[#707072]">
+                  <p className="text-xs text-[#64748d]">
                     Your idea → finished song
                   </p>
                 </div>
-                <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#111111]">
+                <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#533afd]">
                   <Music2 className="h-4 w-4 text-white" />
                 </span>
               </div>
-              <div className="mt-6 h-28 rounded-xl border border-[#cacacb] bg-[#f5f5f5] p-4">
+              <div className="mt-6 h-28 rounded-xl border border-[#e3e8ee] bg-[#f6f9fc] p-4">
                 <Waveform />
               </div>
               <div className="mt-6 grid grid-cols-3 gap-3 text-center">
@@ -180,12 +180,12 @@ export default function HomePage() {
                 ].map((s) => (
                   <div
                     key={s.k}
-                    className="rounded-xl border border-[#cacacb] bg-[#f5f5f5] p-3"
+                    className="rounded-xl border border-[#e3e8ee] bg-[#f6f9fc] p-3"
                   >
-                    <p className="text-[11px] uppercase tracking-wider text-[#707072]">
+                    <p className="text-[11px] uppercase tracking-wider text-[#64748d]">
                       {s.k}
                     </p>
-                    <p className="mt-1 text-xs font-semibold text-[#111111]">
+                    <p className="mt-1 text-xs font-semibold text-[#0d253d]">
                       {s.v}
                     </p>
                   </div>
@@ -207,16 +207,16 @@ export default function HomePage() {
           {steps.map((step, i) => (
             <Reveal key={step.title} delay={i * 90}>
               <div className="card card-hover relative h-full p-6">
-                <span className="absolute right-5 top-5 font-display text-4xl font-bold text-[#111111]/[0.06]">
+                <span className="absolute right-5 top-5 font-display text-4xl font-bold text-[#0d253d]/[0.06]">
                   0{i + 1}
                 </span>
-                <span className="flex h-12 w-12 items-center justify-center rounded-xl border border-[#cacacb] bg-[#f5f5f5]">
-                  <step.icon className="h-5 w-5 text-[#111111]" />
+                <span className="flex h-12 w-12 items-center justify-center rounded-xl border border-[#e3e8ee] bg-[#f6f9fc]">
+                  <step.icon className="h-5 w-5 text-[#0d253d]" />
                 </span>
                 <h3 className="mt-5 text-lg font-medium">
                   {step.title}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-[#707072]">
+                <p className="mt-2 text-sm leading-relaxed text-[#64748d]">
                   {step.body}
                 </p>
               </div>
@@ -226,7 +226,7 @@ export default function HomePage() {
       </section>
 
       {/* ───────────────────────── Services ───────────────────── */}
-      <section className="border-y border-[#cacacb] bg-[#f5f5f5]">
+      <section className="border-y border-[#e3e8ee] bg-[#f6f9fc]">
         <div className="container-page py-20 sm:py-24">
           <SectionHeading
             eyebrow="What I create"
@@ -237,13 +237,13 @@ export default function HomePage() {
             {services.map((service, i) => (
               <Reveal key={service.title} delay={(i % 3) * 90}>
                 <div className="card card-hover group h-full bg-white p-6">
-                  <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#111111] transition-opacity duration-200 group-hover:opacity-75">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#533afd] transition-opacity duration-200 group-hover:opacity-75">
                     <service.icon className="h-5 w-5 text-white" />
                   </span>
                   <h3 className="mt-5 text-lg font-medium">
                     {service.title}
                   </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-[#707072]">
+                  <p className="mt-2 text-sm leading-relaxed text-[#64748d]">
                     {service.body}
                   </p>
                 </div>
@@ -254,14 +254,14 @@ export default function HomePage() {
                 href="/submit"
                 className="card card-hover flex h-full flex-col justify-between gap-6 bg-white p-6"
               >
-                <span className="flex h-12 w-12 items-center justify-center rounded-xl border border-[#cacacb] bg-[#f5f5f5]">
-                  <ArrowRight className="h-5 w-5 text-[#111111]" />
+                <span className="flex h-12 w-12 items-center justify-center rounded-xl border border-[#e3e8ee] bg-[#f6f9fc]">
+                  <ArrowRight className="h-5 w-5 text-[#0d253d]" />
                 </span>
                 <div>
                   <h3 className="text-lg font-medium">
                     Not sure which fits?
                   </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-[#707072]">
+                  <p className="mt-2 text-sm leading-relaxed text-[#64748d]">
                     Just submit your idea and I&rsquo;ll help you figure out the
                     right approach.
                   </p>
@@ -306,7 +306,7 @@ export default function HomePage() {
       </section>
 
       {/* ─────────────────────── FAQ preview ──────────────────── */}
-      <section className="border-t border-[#cacacb] bg-[#f5f5f5]">
+      <section className="border-t border-[#e3e8ee] bg-[#f6f9fc]">
         <div className="container-page py-20 sm:py-24">
           <SectionHeading
             eyebrow="Questions"

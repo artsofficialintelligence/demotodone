@@ -21,22 +21,34 @@ export default function CTASection({
 }: CTASectionProps) {
   return (
     <section className="container-page py-20 sm:py-28">
-      <Reveal className="overflow-hidden border border-[#cacacb] bg-[#f5f5f5] px-6 py-14 text-center sm:px-12 sm:py-20">
-        <div className="mx-auto max-w-2xl">
-          <h2 className="text-3xl font-semibold leading-tight tracking-tight sm:text-4xl">
+      <Reveal className="relative overflow-hidden rounded-2xl bg-[#1c1e54] px-6 py-14 text-center sm:px-12 sm:py-20">
+        {/* Subtle gradient mesh overlay */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 rounded-2xl"
+          style={{
+            background:
+              "radial-gradient(ellipse 70% 80% at 50% -20%, rgba(101,94,253,0.35) 0%, transparent 70%)",
+          }}
+        />
+        <div className="relative mx-auto max-w-2xl">
+          <h2 className="text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl">
             {title}
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-[#707072] sm:text-lg">
+          <p className="mt-4 text-base leading-relaxed text-white/60 sm:text-lg">
             {description}
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <Link href={primaryHref} className="btn-primary w-full sm:w-auto">
+            <Link
+              href={primaryHref}
+              className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-[#1c1e54] transition-opacity duration-200 hover:opacity-90 sm:w-auto"
+            >
               {primaryLabel}
               <ArrowRight className="h-4 w-4" />
             </Link>
             <Link
               href={secondaryHref}
-              className="btn-secondary w-full sm:w-auto"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/30 px-6 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-white/10 sm:w-auto"
             >
               {secondaryLabel}
             </Link>

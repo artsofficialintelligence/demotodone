@@ -25,7 +25,7 @@ export default function SectionHeading({
         {title}
       </h2>
       {description && (
-        <p className="text-base leading-relaxed text-slate-400 sm:text-lg">
+        <p className="text-base leading-relaxed text-[#64748d] sm:text-lg">
           {description}
         </p>
       )}

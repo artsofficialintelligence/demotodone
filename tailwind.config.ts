@@ -9,31 +9,40 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Nike-inspired palette
+        // Stripe-inspired palette
         canvas: "#ffffff",
-        "soft-cloud": "#f5f5f5",
-        hairline: "#cacacb",
+        "canvas-soft": "#f6f9fc",
+        "canvas-cream": "#f5e9d4",
+        hairline: "#e3e8ee",
+        "hairline-input": "#a8c3de",
         ink: {
-          // Remapped to light surfaces so existing class names still resolve
-          950: "#ffffff",   // body bg (was near-black)
-          900: "#f5f5f5",   // alt section bg (was dark card)
-          850: "#ffffff",   // card bg
-          800: "#f5f5f5",
-          750: "#e5e5e5",
-          700: "#cacacb",   // hairline
-          DEFAULT: "#111111",
-          charcoal: "#39393b",
-          mute: "#707072",
+          // Text hierarchy — deep navy
+          950: "#ffffff",
+          900: "#f6f9fc",
+          850: "#ffffff",
+          800: "#f6f9fc",
+          750: "#e3e8ee",
+          700: "#e3e8ee",
+          DEFAULT: "#0d253d",
+          charcoal: "#273951",
+          mute: "#64748d",
         },
         brand: {
-          DEFAULT: "#111111",  // Nike black as primary
-          light: "#39393b",    // charcoal
-          dark: "#111111",
-          glow: "transparent",
+          DEFAULT: "#533afd",   // Stripe indigo
+          light: "#665efd",
+          dark: "#1c1e54",      // brand-dark-900
+          glow: "rgba(83,58,253,0.15)",
         },
         accent: {
-          DEFAULT: "#111111",
-          light: "#39393b",
+          DEFAULT: "#533afd",
+          light: "#665efd",
+        },
+        primary: {
+          DEFAULT: "#533afd",
+          deep: "#4434d4",
+          press: "#2e2b8c",
+          soft: "#665efd",
+          subdued: "#b9b9f9",
         },
       },
       fontFamily: {
@@ -42,12 +51,13 @@ const config: Config = {
         campaign: ["var(--font-campaign)", "Impact", "sans-serif"],
       },
       backgroundImage: {
-        "brand-gradient": "linear-gradient(135deg, #111111 0%, #39393b 100%)",
-        "hero-glow": "none",
+        "brand-gradient": "linear-gradient(135deg, #533afd 0%, #4434d4 100%)",
+        "hero-mesh": "radial-gradient(ellipse 80% 60% at 50% -10%, #f5e9d4 0%, #e8e4ff 30%, #c8d8ff 55%, #ffffff 80%)",
+        "hero-glow": "radial-gradient(ellipse 80% 60% at 50% -10%, #f5e9d4 0%, #e8e4ff 30%, #c8d8ff 55%, #ffffff 80%)",
       },
       boxShadow: {
-        glow: "none",
-        card: "none",
+        glow: "0 0 40px rgba(83,58,253,0.18)",
+        card: "0 2px 8px rgba(13,37,61,0.06), 0 0 0 1px #e3e8ee",
       },
       keyframes: {
         "fade-up": {

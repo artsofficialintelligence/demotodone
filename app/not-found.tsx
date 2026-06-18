@@ -6,9 +6,9 @@ export default function NotFound() {
     <section className="container-page flex min-h-[70vh] flex-col items-center justify-center py-24 text-center">
       <span className="eyebrow">Error 404</span>
       <h1 className="mt-6 text-5xl font-semibold tracking-tight sm:text-6xl">
-        This track <span className="underline decoration-[#cacacb] underline-offset-4">skipped</span>.
+        This track <span className="underline decoration-[#e3e8ee] underline-offset-4">skipped</span>.
       </h1>
-      <p className="mt-5 max-w-md text-base leading-relaxed text-[#707072]">
+      <p className="mt-5 max-w-md text-base leading-relaxed text-[#64748d]">
         The page you&rsquo;re looking for isn&rsquo;t here. Let&rsquo;s get you
         back to something that plays.
       </p>

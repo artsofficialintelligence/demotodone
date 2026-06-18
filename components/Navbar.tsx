@@ -36,7 +36,7 @@ export default function Navbar() {
     <header
       className={`sticky top-0 z-40 transition-all duration-300 ${
         scrolled
-          ? "border-b border-[#cacacb] bg-white/95 backdrop-blur-sm"
+          ? "border-b border-[#e3e8ee] bg-white/95 backdrop-blur-sm"
           : "border-b border-transparent bg-white"
       }`}
     >
@@ -49,10 +49,10 @@ export default function Navbar() {
           className="group flex items-center gap-2.5"
           aria-label={`${siteConfig.name} home`}
         >
-          <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#111111] transition-opacity duration-200 group-hover:opacity-75">
+          <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#533afd] transition-opacity duration-200 group-hover:opacity-75">
             <Music4 className="h-5 w-5 text-white" strokeWidth={2.2} />
           </span>
-          <span className="text-lg font-semibold tracking-tight text-[#111111]">
+          <span className="text-lg font-semibold tracking-tight text-[#0d253d]">
             {siteConfig.name}
           </span>
         </Link>
@@ -65,8 +65,8 @@ export default function Navbar() {
                 href={link.href}
                 className={`rounded-full px-4 py-2 text-sm font-medium transition-colors duration-200 ${
                   isActive(link.href)
-                    ? "text-[#111111]"
-                    : "text-[#707072] hover:text-[#111111]"
+                    ? "text-[#0d253d]"
+                    : "text-[#64748d] hover:text-[#0d253d]"
                 }`}
               >
                 {link.label}
@@ -85,7 +85,7 @@ export default function Navbar() {
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
-          className="flex h-10 w-10 items-center justify-center rounded-lg border border-[#cacacb] text-[#111111] md:hidden"
+          className="flex h-10 w-10 items-center justify-center rounded-lg border border-[#e3e8ee] text-[#0d253d] md:hidden"
           aria-expanded={open}
           aria-controls="mobile-menu"
           aria-label={open ? "Close menu" : "Open menu"}
@@ -98,7 +98,7 @@ export default function Navbar() {
       {open && (
         <div
           id="mobile-menu"
-          className="border-t border-[#cacacb] bg-white md:hidden"
+          className="border-t border-[#e3e8ee] bg-white md:hidden"
         >
           <ul className="container-page flex flex-col gap-1 py-4">
             {navLinks.map((link) => (
@@ -107,8 +107,8 @@ export default function Navbar() {
                   href={link.href}
                   className={`block rounded-xl px-4 py-3 text-base font-medium transition-colors ${
                     isActive(link.href)
-                      ? "bg-[#f5f5f5] text-[#111111]"
-                      : "text-[#707072] hover:bg-[#f5f5f5] hover:text-[#111111]"
+                      ? "bg-[#f6f9fc] text-[#0d253d]"
+                      : "text-[#64748d] hover:bg-[#f6f9fc] hover:text-[#0d253d]"
                   }`}
                 >
                   {link.label}

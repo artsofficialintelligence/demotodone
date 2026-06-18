@@ -82,7 +82,7 @@ export default function PricingPage() {
       <section className="relative overflow-hidden">
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-0"
+          className="pointer-events-none absolute inset-0 bg-hero-mesh opacity-70"
         />
         <div className="container-page relative py-20 text-center sm:py-24">
           <Reveal className="mx-auto max-w-2xl items-center">
@@ -92,9 +92,9 @@ export default function PricingPage() {
             </span>
             <h1 className="mt-6 text-4xl font-semibold leading-[1.1] tracking-tight sm:text-5xl">
               Every song is{" "}
-              <span className="underline decoration-[#cacacb] underline-offset-4">quoted to fit</span>.
+              <span className="underline decoration-[#e3e8ee] underline-offset-4">quoted to fit</span>.
             </h1>
-            <p className="mt-6 text-lg leading-relaxed text-[#707072]">
+            <p className="mt-6 text-lg leading-relaxed text-[#64748d]">
               Custom work doesn&rsquo;t fit neatly into a price sticker — scope,
               length, revisions, and how finished your starting material is all
               shape the cost. Pick the package that sounds closest, submit your
@@ -112,48 +112,48 @@ export default function PricingPage() {
               <div
                 className={`relative flex h-full flex-col rounded-2xl border p-7 transition-all duration-300 sm:p-8 ${
                   pkg.featured
-                    ? "border-[#111111] bg-[#f5f5f5] "
+                    ? "border-[#1c1e54] bg-[#1c1e54] "
                     : "card card-hover"
                 }`}
               >
                 {pkg.featured && (
-                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-[#111111] px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white ">
+                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-[#1c1e54] px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white ">
                     Most popular
                   </span>
                 )}
-                <h2 className="font-display text-xl font-semibold text-[#111111]">
+                <h2 className={`font-display text-xl font-semibold ${pkg.featured ? "text-white" : "text-[#0d253d]"}`}>
                   {pkg.name}
                 </h2>
-                <p className="mt-1 text-sm text-[#111111]">{pkg.tagline}</p>
+                <p className={`mt-1 text-sm ${pkg.featured ? "text-white/70" : "text-[#0d253d]"}`}>{pkg.tagline}</p>
 
                 <div className="mt-5 flex items-baseline gap-2">
-                  <span className="font-display text-3xl font-bold text-[#111111]">
+                  <span className={`font-display text-3xl font-bold ${pkg.featured ? "text-white" : "text-[#0d253d]"}`}>
                     Custom quote
                   </span>
                 </div>
-                <p className="mt-2 text-xs leading-relaxed text-[#707072]/70">
+                <p className={`mt-2 text-xs leading-relaxed ${pkg.featured ? "text-white/50" : "text-[#64748d]/70"}`}>
                   {pkg.bestFor}
                 </p>
 
                 <Link
                   href="/submit"
                   className={`mt-6 w-full ${
-                    pkg.featured ? "btn-primary" : "btn-secondary"
+                    pkg.featured ? "btn-secondary" : "btn-primary"
                   }`}
                 >
                   Get a quote
                   <ArrowRight className="h-4 w-4" />
                 </Link>
 
-                <ul className="mt-7 space-y-3 border-t border-[#cacacb] pt-7">
+                <ul className={`mt-7 space-y-3 border-t pt-7 ${pkg.featured ? "border-white/20" : "border-[#e3e8ee]"}`}>
                   {pkg.features.map((feature) => (
                     <li key={feature} className="flex gap-3 text-sm">
-                      <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-[#111111]" />
+                      <Check className={`mt-0.5 h-4 w-4 flex-shrink-0 ${pkg.featured ? "text-white/70" : "text-[#533afd]"}`} />
                       <span
                         className={
                           feature.endsWith("plus:")
-                            ? "font-medium text-[#111111]"
-                            : "text-[#707072]"
+                            ? `font-medium ${pkg.featured ? "text-white" : "text-[#0d253d]"}`
+                            : pkg.featured ? "text-white/70" : "text-[#64748d]"
                         }
                       >
                         {feature}
@@ -172,22 +172,22 @@ export default function PricingPage() {
         <Reveal>
           <div className="card p-7 sm:p-9">
             <div className="flex items-center gap-3">
-              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#111111]">
+              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#533afd]">
                 <MessageSquareQuote className="h-5 w-5 text-white" />
               </span>
-              <h2 className="text-xl font-semibold text-[#111111] sm:text-2xl">
+              <h2 className="text-xl font-semibold text-[#0d253d] sm:text-2xl">
                 Included with every package
               </h2>
             </div>
             <div className="mt-6 grid gap-3 sm:grid-cols-2">
               {includedEverywhere.map((item) => (
-                <div key={item} className="flex gap-3 text-sm text-[#111111]/80">
-                  <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-[#111111]" />
+                <div key={item} className="flex gap-3 text-sm text-[#0d253d]/80">
+                  <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-[#0d253d]" />
                   {item}
                 </div>
               ))}
             </div>
-            <p className="mt-6 text-sm leading-relaxed text-[#707072]/70">
+            <p className="mt-6 text-sm leading-relaxed text-[#64748d]/70">
               Note: package names and inclusions are a starting framework — your
               final quote is tailored to your actual project. Not sure which
               tier fits? Just submit your idea and I&rsquo;ll recommend the
