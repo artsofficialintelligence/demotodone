@@ -25,6 +25,7 @@ export default function MusicBackground({ className = "" }: { className?: string
 
     function resize() {
       // Use offsetWidth/offsetHeight — reliable after mount
+      if (!canvas) return;
       const w = canvas.offsetWidth;
       const h = canvas.offsetHeight;
       if (w > 0 && h > 0) {
