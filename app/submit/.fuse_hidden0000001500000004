@@ -25,7 +25,8 @@ export default function SubmitPage() {
         <div
           aria-hidden
           className="pointer-events-none absolute inset-0 bg-hero-mesh opacity-70" />
-        <MusicBackground className="opacity-50" />
+        <MusicBackground className="opacity-50
+        />
         <div className="container-page relative py-16 text-center sm:py-20">
           <Reveal className="mx-auto max-w-2xl items-center">
             <span className="eyebrow">

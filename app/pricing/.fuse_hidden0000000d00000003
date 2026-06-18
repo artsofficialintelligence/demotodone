@@ -5,11 +5,12 @@ import Reveal from "@/components/Reveal";
 import MusicBackground from "@/components/MusicBackground";
 import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
+import MusicBackground from "@/components/MusicBackground";
 
 export const metadata: Metadata = {
   title: "Pricing & Packages",
   description:
-    "Three custom song packages — Starter, Professional, and Premium. Every project is quoted individually based on scope. Submit your idea for a quote.",
+    "Three custom song packages — Starter, Professional, and Premium. Every project is quoted individually based on scope. Submit your idea for a fixed quote.",
   alternates: { canonical: "/pricing" },
 };
 
@@ -98,7 +99,7 @@ export default function PricingPage() {
               Custom work doesn&rsquo;t fit neatly into a price sticker — scope,
               length, revisions, and how finished your starting material is all
               shape the cost. Pick the package that sounds closest, submit your
-              idea, and I&rsquo;ll send you a clear quote.
+              idea, and I&rsquo;ll send you a clear, fixed quote.
             </p>
           </Reveal>
         </div>

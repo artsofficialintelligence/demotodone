@@ -98,7 +98,7 @@ export default function PricingPage() {
               Custom work doesn&rsquo;t fit neatly into a price sticker — scope,
               length, revisions, and how finished your starting material is all
               shape the cost. Pick the package that sounds closest, submit your
-              idea, and I&rsquo;ll send you a clear quote.
+              idea, and I&rsquo;ll send you a clear, fixed quote.
             </p>
           </Reveal>
         </div>
