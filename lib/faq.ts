@@ -17,7 +17,7 @@ export const faqs: FaqItem[] = [
   {
     question: "What do I need to submit? I only have a rough idea.",
     answer:
-      "A rough idea is plenty. Some people send finished lyrics and a clear reference track; others send a 20-second hummed voice memo and a feeling they're chasing. Both are great starting points. The submission form has optional fields for lyrics, demos, and voice notes — share whatever you have, and we'll shape the rest together.",
+      "A rough idea is plenty. Some people send finished lyrics and a clear reference track; others send a 20-second hummed voice memo and a feeling they're chasing. You can even submit a finished song you want recreated or reimagined in a different style. All are great starting points. The submission form has optional fields for lyrics, demos, and voice notes — share whatever you have, and we'll shape the rest together.",
   },
   {
     question: "What does your production process look like?",

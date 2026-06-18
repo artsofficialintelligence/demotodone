@@ -70,9 +70,8 @@ const packages: Package[] = [
 
 const includedEverywhere = [
   "A personal review of your submission",
-  "A fixed, written quote before any work begins",
+  "A written quote before any work begins",
   "Direct communication — no portal, no middleman",
-  "Clear, written terms on usage rights",
 ];
 
 export default function PricingPage() {

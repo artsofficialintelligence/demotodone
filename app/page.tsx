@@ -61,7 +61,7 @@ const services = [
   },
   {
     icon: Wand2,
-    title: "Finish unfinished demos",
+    title: "Finish your demos",
     body: "That half-done track sitting in your drafts? Let's get it across the finish line.",
   },
   {
@@ -118,7 +118,7 @@ export default function HomePage() {
             </Reveal>
             <Reveal delay={160}>
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-[#64748d]">
-                Send your lyrics, demos, voice notes, or rough ideas. I handle
+                Send your demos, lyrics, voice notes, or rough ideas. I handle
                 the production from start to finish — shaping, refining, and
                 delivering every detail until it&rsquo;s exactly right. Fast,
                 polished, and built around your vision.
