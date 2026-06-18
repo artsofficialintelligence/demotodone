@@ -2,6 +2,10 @@
 
 import { useEffect, useRef } from "react";
 
+// Draws multiple DAW-style audio waveform tracks as an animated background.
+// Each track is a row of vertical bars (like an audio waveform in a DAW),
+// with amplitudes driven by layered sine waves so they breathe and pulse.
+
 export default function MusicBackground({ className = "" }: { className?: string }) {
   const ref = useRef<HTMLCanvasElement>(null);
 
@@ -10,7 +14,6 @@ export default function MusicBackground({ className = "" }: { className?: string
     if (!el) return;
     if (!el.getContext("2d")) return;
 
-    // Non-null assertions — we verified above these exist
     const canvas = el as HTMLCanvasElement;
     // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     const ctx = el.getContext("2d")!;
@@ -18,14 +21,17 @@ export default function MusicBackground({ className = "" }: { className?: string
     let raf: number;
     let frame = 0;
 
-    const waves = [
-      { y: 0.12, freq: 0.016, amp: 0.07, spd: 0.40, r: 83,  g: 58,  b: 253, a: 0.45, lw: 2.0 },
-      { y: 0.28, freq: 0.011, amp: 0.10, spd: 0.22, r: 83,  g: 58,  b: 253, a: 0.30, lw: 1.5 },
-      { y: 0.46, freq: 0.022, amp: 0.08, spd: 0.45, r: 28,  g: 30,  b: 84,  a: 0.35, lw: 2.5 },
-      { y: 0.62, freq: 0.014, amp: 0.11, spd: 0.18, r: 83,  g: 58,  b: 253, a: 0.25, lw: 1.5 },
-      { y: 0.78, freq: 0.019, amp: 0.06, spd: 0.35, r: 100, g: 116, b: 141, a: 0.30, lw: 1.5 },
-      { y: 0.92, freq: 0.013, amp: 0.08, spd: 0.28, r: 83,  g: 58,  b: 253, a: 0.20, lw: 1.0 },
+    // Each track: vertical position, color, animation speeds, opacity
+    const tracks = [
+      { y: 0.18, r: 83,  g: 58,  b: 253, a: 0.28, spd: 0.55, spd2: 0.22, barW: 2, gap: 1 },
+      { y: 0.38, r: 28,  g: 30,  b: 84,  a: 0.22, spd: 0.30, spd2: 0.40, barW: 3, gap: 2 },
+      { y: 0.58, r: 83,  g: 58,  b: 253, a: 0.20, spd: 0.45, spd2: 0.18, barW: 2, gap: 1 },
+      { y: 0.76, r: 100, g: 116, b: 141, a: 0.18, spd: 0.25, spd2: 0.50, barW: 2, gap: 2 },
+      { y: 0.92, r: 83,  g: 58,  b: 253, a: 0.15, spd: 0.60, spd2: 0.30, barW: 2, gap: 1 },
     ];
+
+    // Max bar height as a fraction of canvas height for each track
+    const maxBarH = 0.07;
 
     function resize() {
       const w = canvas.offsetWidth;
@@ -36,7 +42,6 @@ export default function MusicBackground({ className = "" }: { className?: string
       }
     }
 
-    // Resize immediately, then again on next frame (guarantees layout is done)
     resize();
     requestAnimationFrame(resize);
     window.addEventListener("resize", resize, { passive: true });
@@ -45,7 +50,6 @@ export default function MusicBackground({ className = "" }: { className?: string
       const W = canvas.width;
       const H = canvas.height;
 
-      // If canvas still has no size, retry next frame
       if (W === 0 || H === 0) {
         resize();
         raf = requestAnimationFrame(draw);
@@ -54,27 +58,32 @@ export default function MusicBackground({ className = "" }: { className?: string
 
       ctx.clearRect(0, 0, W, H);
 
-      waves.forEach((w) => {
-        const cy    = H * w.y;
-        const amp   = H * w.amp;
-        const phase = frame * w.spd * 0.012;
+      const t = frame * 0.012;
 
-        ctx.beginPath();
-        ctx.strokeStyle = `rgba(${w.r},${w.g},${w.b},${w.a})`;
-        ctx.lineWidth   = w.lw;
-        ctx.lineJoin    = "round";
+      tracks.forEach((track) => {
+        const cy     = H * track.y;
+        const maxH   = H * maxBarH;
+        const step   = track.barW + track.gap;
+        const cols   = Math.ceil(W / step);
 
-        for (let x = 0; x <= W; x += 2) {
-          const y =
-            cy
-            + Math.sin(x * w.freq + phase)              * amp
-            + Math.sin(x * w.freq * 2.3 + phase * 1.6) * amp * 0.35
-            + Math.sin(x * w.freq * 0.5 + phase * 0.7) * amp * 0.20;
+        ctx.fillStyle = `rgba(${track.r},${track.g},${track.b},${track.a})`;
 
-          x === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+        for (let i = 0; i < cols; i++) {
+          const x = i * step;
+          // Amplitude: layered sines create a realistic waveform envelope
+          const norm = i / cols;
+          const amp =
+            Math.abs(
+              Math.sin(norm * Math.PI * 6  + t * track.spd)  * 0.55 +
+              Math.sin(norm * Math.PI * 14 + t * track.spd2) * 0.28 +
+              Math.sin(norm * Math.PI * 3  + t * track.spd * 0.7) * 0.17
+            );
+
+          const barH = Math.max(2, amp * maxH);
+
+          // Draw symmetric bar (up and down from centre, like a real waveform)
+          ctx.fillRect(x, cy - barH, track.barW, barH * 2);
         }
-
-        ctx.stroke();
       });
 
       frame++;
