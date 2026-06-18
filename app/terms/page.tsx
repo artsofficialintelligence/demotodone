@@ -146,10 +146,8 @@ export default function TermsPage() {
             </h2>
             <p className="mt-2">
               {siteConfig.name} uses a combination of AI-assisted music production software and
-              traditional production tools as part of the creative process. AI is one tool among
-              several — all creative direction, curation, arrangement decisions, and refinement
-              are handled personally by me. What you receive is a finished, polished deliverable
-              shaped around your specific vision, not raw or unedited output of any kind.
+              traditional production tools as part of the creative process. All creative direction,
+              curation, and decisions about the final result are handled personally by me.
             </p>
           </div>
 
