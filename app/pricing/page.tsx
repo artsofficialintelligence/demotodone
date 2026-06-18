@@ -2,7 +2,6 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { ArrowRight, Check, Sparkles, MessageSquareQuote } from "lucide-react";
 import Reveal from "@/components/Reveal";
-import MusicBackground from "@/components/MusicBackground";
 import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
 
@@ -39,8 +38,7 @@ const packages: Package[] = [
   {
     name: "Professional",
     tagline: "A polished, release-ready production.",
-    bestFor:
-      "Best for vocal songs, finished demos, and projects you intend to share widely.",
+    bestFor: "Best for vocal songs, finished demos, and projects you intend to share widely.",
     features: [
       "Everything in Starter, plus:",
       "Full vocal production or detailed instrumental",
@@ -55,8 +53,7 @@ const packages: Package[] = [
   {
     name: "Premium",
     tagline: "The full creative treatment.",
-    bestFor:
-      "Best for ambitious projects, special occasions, or multi-song work.",
+    bestFor: "Best for ambitious projects, special occasions, or multi-song work.",
     features: [
       "Everything in Professional, plus:",
       "Deep creative development from the ground up",
@@ -82,8 +79,8 @@ export default function PricingPage() {
       <section className="relative overflow-hidden">
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-0 bg-hero-mesh opacity-70" />
-        <MusicBackground className="opacity-50" />
+          className="pointer-events-none absolute inset-0 bg-hero-mesh opacity-70"
+        />
         <div className="container-page relative py-20 text-center sm:py-24">
           <Reveal className="mx-auto max-w-2xl items-center">
             <span className="eyebrow">
@@ -111,21 +108,20 @@ export default function PricingPage() {
             <Reveal key={pkg.name} delay={i * 110}>
               <div
                 className={`relative flex h-full flex-col rounded-2xl border p-7 transition-all duration-300 sm:p-8 ${
-                  pkg.featured
-                    ? "border-[#1c1e54] bg-[#1c1e54] "
-                    : "card card-hover"
+                  pkg.featured ? "border-[#1c1e54] bg-[#1c1e54]" : "card card-hover"
                 }`}
               >
                 {pkg.featured && (
-                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-[#1c1e54] px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white ">
+                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-[#1c1e54] px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white">
                     Most popular
                   </span>
                 )}
                 <h2 className={`font-display text-xl font-semibold ${pkg.featured ? "text-white" : "text-[#0d253d]"}`}>
                   {pkg.name}
                 </h2>
-                <p className={`mt-1 text-sm ${pkg.featured ? "text-white/70" : "text-[#0d253d]"}`}>{pkg.tagline}</p>
-
+                <p className={`mt-1 text-sm ${pkg.featured ? "text-white/70" : "text-[#0d253d]"}`}>
+                  {pkg.tagline}
+                </p>
                 <div className="mt-5 flex items-baseline gap-2">
                   <span className={`font-display text-3xl font-bold ${pkg.featured ? "text-white" : "text-[#0d253d]"}`}>
                     Custom quote
@@ -134,17 +130,13 @@ export default function PricingPage() {
                 <p className={`mt-2 text-xs leading-relaxed ${pkg.featured ? "text-white/50" : "text-[#64748d]/70"}`}>
                   {pkg.bestFor}
                 </p>
-
                 <Link
                   href="/submit"
-                  className={`mt-6 w-full ${
-                    pkg.featured ? "btn-secondary" : "btn-primary"
-                  }`}
+                  className={`mt-6 w-full ${pkg.featured ? "btn-secondary" : "btn-primary"}`}
                 >
                   Get a quote
                   <ArrowRight className="h-4 w-4" />
                 </Link>
-
                 <ul className={`mt-7 space-y-3 border-t pt-7 ${pkg.featured ? "border-white/20" : "border-[#e3e8ee]"}`}>
                   {pkg.features.map((feature) => (
                     <li key={feature} className="flex gap-3 text-sm">
@@ -190,8 +182,7 @@ export default function PricingPage() {
             <p className="mt-6 text-sm leading-relaxed text-[#64748d]/70">
               Note: package names and inclusions are a starting framework — your
               final quote is tailored to your actual project. Not sure which
-              tier fits? Just submit your idea and I&rsquo;ll recommend the
-              right one.
+              tier fits? Just submit your idea and I&rsquo;ll recommend the right one.
             </p>
           </div>
         </Reveal>

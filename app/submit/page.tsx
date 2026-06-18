@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Upload, Eye, MessagesSquare, Sparkles, Lock } from "lucide-react";
 import Reveal from "@/components/Reveal";
-import MusicBackground from "@/components/MusicBackground";
 import SubmitForm from "@/components/SubmitForm";
 
 export const metadata: Metadata = {
@@ -24,8 +23,8 @@ export default function SubmitPage() {
       <section className="relative overflow-hidden">
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-0 bg-hero-mesh opacity-70" />
-        <MusicBackground className="opacity-50" />
+          className="pointer-events-none absolute inset-0 bg-hero-mesh opacity-70"
+        />
         <div className="container-page relative py-16 text-center sm:py-20">
           <Reveal className="mx-auto max-w-2xl items-center">
             <span className="eyebrow">
@@ -39,8 +38,7 @@ export default function SubmitPage() {
             <p className="mt-6 text-lg leading-relaxed text-[#64748d]">
               Share whatever you have — finished lyrics, a rough demo, a voice
               memo, or just a concept. There are no wrong answers here. I review
-              every submission personally and reply by email to start the
-              conversation.
+              every submission personally and reply by email to start the conversation.
             </p>
           </Reveal>
 

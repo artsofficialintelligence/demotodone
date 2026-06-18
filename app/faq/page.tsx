@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Sparkles } from "lucide-react";
 import Reveal from "@/components/Reveal";
-import MusicBackground from "@/components/MusicBackground";
 import FaqAccordion from "@/components/FaqAccordion";
 import CTASection from "@/components/CTASection";
 import { faqs } from "@/lib/faq";
@@ -13,17 +12,13 @@ export const metadata: Metadata = {
   alternates: { canonical: "/faq" },
 };
 
-// FAQ structured data for rich results in search
 const faqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   mainEntity: faqs.map((f) => ({
     "@type": "Question",
     name: f.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: f.answer,
-    },
+    acceptedAnswer: { "@type": "Answer", text: f.answer },
   })),
 };
 
@@ -39,8 +34,8 @@ export default function FaqPage() {
       <section className="relative overflow-hidden">
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-0 bg-hero-mesh opacity-70" />
-        <MusicBackground className="opacity-50" />
+          className="pointer-events-none absolute inset-0 bg-hero-mesh opacity-70"
+        />
         <div className="container-page relative py-20 text-center sm:py-24">
           <Reveal className="mx-auto max-w-2xl items-center">
             <span className="eyebrow">
@@ -53,8 +48,7 @@ export default function FaqPage() {
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-[#64748d]">
               If your question isn&rsquo;t here, the contact page is one click
-              away — I&rsquo;m happy to talk it through before you submit
-              anything.
+              away — I&rsquo;m happy to talk it through before you submit anything.
             </p>
           </Reveal>
         </div>

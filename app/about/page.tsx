@@ -7,7 +7,6 @@ import {
   Sparkles,
 } from "lucide-react";
 import Reveal from "@/components/Reveal";
-import MusicBackground from "@/components/MusicBackground";
 import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
 import SpotifyGrid from "@/components/SpotifyGrid";
@@ -43,7 +42,6 @@ const values = [
   },
 ];
 
-
 export default function AboutPage() {
   return (
     <>
@@ -51,8 +49,8 @@ export default function AboutPage() {
       <section className="relative overflow-hidden">
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-0 bg-hero-mesh opacity-70" />
-        <MusicBackground className="opacity-50" />
+          className="pointer-events-none absolute inset-0 bg-hero-mesh opacity-70"
+        />
         <div className="container-page relative py-20 sm:py-28">
           <Reveal className="max-w-3xl">
             <span className="eyebrow">
@@ -75,32 +73,30 @@ export default function AboutPage() {
       {/* Story */}
       <section className="border-b border-[#e3e8ee] bg-[#f6f9fc]">
         <div className="container-page py-16 sm:py-20">
-        <Reveal>
-          <div className="max-w-3xl">
-            <h2 className="text-2xl font-semibold sm:text-3xl">
-              About me
-            </h2>
-            <div className="mt-5 space-y-4 text-sm leading-relaxed text-[#64748d] sm:text-base">
-              <p>
-                I have a background in songwriting, production, performing in bands,
-                and audio work. I understand how songs are built, what a lyric needs,
-                and how to shape an arrangement that serves the idea.
-              </p>
-              <p>
-                Whether you bring a rough demo, a voice memo, a lyric sheet, a melody,
-                or just the spark of an idea, that&rsquo;s the foundation I build from.
-                I use modern production tools to develop and refine your ideas into
-                finished songs that feel complete, polished, and true to your vision.
-              </p>
-              <p>
-                The process is guided by experience, instinct, and listening. I shape
-                the production, make the creative decisions, and refine each track until
-                it feels right for you. From demo to done: helping ideas find their
-                final form.
-              </p>
+          <Reveal>
+            <div className="max-w-3xl">
+              <h2 className="text-2xl font-semibold sm:text-3xl">About me</h2>
+              <div className="mt-5 space-y-4 text-sm leading-relaxed text-[#64748d] sm:text-base">
+                <p>
+                  I have a background in songwriting, production, performing in bands,
+                  and audio work. I understand how songs are built, what a lyric needs,
+                  and how to shape an arrangement that serves the idea.
+                </p>
+                <p>
+                  Whether you bring a rough demo, a voice memo, a lyric sheet, a melody,
+                  or just the spark of an idea, that's the foundation I build from.
+                  I use modern production tools to develop and refine your ideas into
+                  finished songs that feel complete, polished, and true to your vision.
+                </p>
+                <p>
+                  The process is guided by experience, instinct, and listening. I shape
+                  the production, make the creative decisions, and refine each track until
+                  it feels right for you. From demo to done: helping ideas find their
+                  final form.
+                </p>
+              </div>
             </div>
-          </div>
-        </Reveal>
+          </Reveal>
         </div>
       </section>
 
@@ -115,8 +111,6 @@ export default function AboutPage() {
           <div className="mt-14">
             <SpotifyGrid tracks={spotifyTracks} />
           </div>
-
-          {/* SoundCloud playlist */}
           <Reveal delay={120} className="mt-10">
             <div className="card p-6 sm:p-7">
               <h3 className="mb-4 text-lg font-medium text-[#0d253d]">
@@ -133,21 +127,11 @@ export default function AboutPage() {
                 style={{ borderRadius: "12px" }}
               />
               <div className="mt-2 truncate text-xs text-[#64748d]">
-                <a
-                  href={soundcloudPlaylist.profileUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#64748d] hover:text-[#0d253d]"
-                >
+                <a href={soundcloudPlaylist.profileUrl} target="_blank" rel="noopener noreferrer" className="text-[#64748d] hover:text-[#0d253d]">
                   {soundcloudPlaylist.profileName}
-                </a>{" "}
-                ·{" "}
-                <a
-                  href={soundcloudPlaylist.playlistUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#64748d] hover:text-[#0d253d]"
-                >
+                </a>
+                {" · "}
+                <a href={soundcloudPlaylist.playlistUrl} target="_blank" rel="noopener noreferrer" className="text-[#64748d] hover:text-[#0d253d]">
                   {soundcloudPlaylist.title}
                 </a>
               </div>
@@ -171,12 +155,8 @@ export default function AboutPage() {
                   <value.icon className="h-5 w-5 text-[#0d253d]" />
                 </span>
                 <div>
-                  <h3 className="text-lg font-medium">
-                    {value.title}
-                  </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-[#64748d]">
-                    {value.body}
-                  </p>
+                  <h3 className="text-lg font-medium">{value.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-[#64748d]">{value.body}</p>
                 </div>
               </div>
             </Reveal>

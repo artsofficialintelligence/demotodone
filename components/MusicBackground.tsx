@@ -8,12 +8,12 @@ export default function MusicBackground({ className = "" }: { className?: string
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-    const ctxOrNull = el.getContext("2d");
-    if (!ctxOrNull) return;
+    if (!el.getContext("2d")) return;
 
-    // Capture as non-null for use inside closures
-    const canvas: HTMLCanvasElement = el;
-    const ctx: CanvasRenderingContext2D = ctxOrNull;
+    // Non-null assertions — we verified above these exist
+    const canvas = el as HTMLCanvasElement;
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+    const ctx = el.getContext("2d")!;
 
     let raf: number;
     let frame = 0;

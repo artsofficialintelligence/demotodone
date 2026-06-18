@@ -21,7 +21,6 @@ import CTASection from "@/components/CTASection";
 import FaqAccordion from "@/components/FaqAccordion";
 import Waveform from "@/components/Waveform";
 import SpotifyGrid from "@/components/SpotifyGrid";
-import MusicBackground from "@/components/MusicBackground";
 import { faqs } from "@/lib/faq";
 import { spotifyTracks } from "@/lib/work";
 
@@ -103,8 +102,7 @@ export default function HomePage() {
     <>
       {/* ───────────────────────── Hero ───────────────────────── */}
       <section className="relative overflow-hidden border-b border-[#e3e8ee] bg-hero-mesh">
-        <MusicBackground className="opacity-60" />
-          <div className="container-page relative grid items-center gap-12 py-20 sm:py-28 lg:grid-cols-12 lg:gap-8 lg:py-32">
+        <div className="container-page relative grid items-center gap-12 py-20 sm:py-28 lg:grid-cols-12 lg:gap-8 lg:py-32">
           <div className="lg:col-span-7">
             <Reveal>
               <span className="eyebrow">
