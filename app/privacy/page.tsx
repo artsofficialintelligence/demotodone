@@ -9,13 +9,13 @@ export const metadata: Metadata = {
   alternates: { canonical: "/privacy" },
 };
 
-const lastUpdated = "May 14, 2026";
+const lastUpdated = "June 18, 2026";
 
 export default function PrivacyPage() {
   return (
     <section className="container-page py-20 sm:py-24">
       <div className="mx-auto max-w-3xl">
-        <p className="text-sm font-medium text-[#0d253d]">Legal</p>
+        <p className="text-sm font-medium text-[#533afd]">Legal</p>
         <h1 className="mt-2 text-4xl font-semibold tracking-tight sm:text-5xl">
           Privacy Policy
         </h1>
@@ -23,53 +23,76 @@ export default function PrivacyPage() {
           Last updated: {lastUpdated}
         </p>
 
-        <div className="mt-6 rounded-xl border border-amber-500/20 bg-amber-500/5 p-4 text-sm text-amber-700/80">
-          <strong className="font-semibold text-amber-700">
-            Template notice:
-          </strong>{" "}
-          This page is a starting template. Before you launch, review and adapt
-          it with a qualified attorney to make sure it reflects your actual data
-          practices and complies with the laws that apply to you.
-        </div>
-
         <div className="legal-prose mt-10 space-y-8 text-sm leading-relaxed text-[#64748d] sm:text-[15px]">
           <div>
             <h2 className="text-lg font-semibold text-[#0d253d]">
-              1. Information you provide
+              1. Who we are
             </h2>
             <p className="mt-2">
-              When you use the submission or contact forms, you may provide your
-              name, email address, an optional phone number or messaging handle,
-              and details about your project — including a description, genre
-              and mood preferences, reference artists, and any files you upload
-              such as lyrics, demos, or voice notes. You choose what to share.
+              {siteConfig.name} is a one-person custom song creation studio operated by an
+              individual based in Canada. This policy explains what information is collected when
+              you use this website, how it is used, and your rights in relation to it. You can
+              reach the studio at{" "}
+              <a href={`mailto:${siteConfig.email}`} className="link-underline">
+                {siteConfig.email}
+              </a>
+              .
             </p>
           </div>
 
           <div>
             <h2 className="text-lg font-semibold text-[#0d253d]">
-              2. How your information is used
+              2. Information you provide
             </h2>
             <p className="mt-2">
-              Information you submit is used solely to review your project,
-              respond to you, prepare a quote, and carry out any work you
-              engage. {siteConfig.name} does not sell your personal information
-              and does not use it for advertising.
+              When you use the submission form or the contact form, you may share the following:
+            </p>
+            <ul className="mt-3 list-disc space-y-2 pl-5">
+              <li>Your name and email address (required to reply to you)</li>
+              <li>
+                An optional phone number or messaging handle if you prefer to communicate
+                that way
+              </li>
+              <li>
+                A description of your project — what kind of song you want, genre, mood,
+                reference artists, and any context you want to share
+              </li>
+              <li>
+                Files you choose to upload, such as lyrics documents, voice memos, rough
+                demos, or reference tracks (up to 20 MB per file)
+              </li>
+              <li>
+                Any other details you include in the free-text fields
+              </li>
+            </ul>
+            <p className="mt-3">
+              You choose exactly what to share. Many fields are optional — you can submit
+              with just a name, email, and a rough description if that&rsquo;s all you have.
             </p>
           </div>
 
           <div>
             <h2 className="text-lg font-semibold text-[#0d253d]">
-              3. How your information is handled
+              3. How your information is used
             </h2>
             <p className="mt-2">
-              Form submissions are delivered by email to the studio through a
-              third-party email delivery provider. Your information and
-              uploaded files are stored only as needed to communicate with you
-              and complete your project. Reasonable measures are taken to keep
-              this information secure, though no method of transmission or
-              storage is completely secure.
+              The information you provide is used for one purpose: to review your project,
+              respond to you, prepare a quote, and carry out any work you commission. Specifically:
             </p>
+            <ul className="mt-3 list-disc space-y-2 pl-5">
+              <li>
+                Your contact details are used to reply to your submission and communicate
+                with you throughout the project.
+              </li>
+              <li>
+                Your project details and uploaded files are used to understand what you need
+                and to produce your song.
+              </li>
+              <li>
+                No information you provide is used for marketing, sold to third parties,
+                or shared with anyone outside the studio.
+              </li>
+            </ul>
           </div>
 
           <div>
@@ -77,22 +100,51 @@ export default function PrivacyPage() {
               4. Third-party services
             </h2>
             <p className="mt-2">
-              This site relies on a small number of third-party providers — for
-              example, an email delivery service to route form submissions, and
-              a hosting provider to serve the website. These providers process
-              data on the studio&rsquo;s behalf and are expected to maintain
-              appropriate safeguards.
+              This site uses a small number of third-party services to operate:
+            </p>
+            <ul className="mt-3 list-disc space-y-2 pl-5">
+              <li>
+                <strong className="font-medium text-[#0d253d]">Resend</strong> — an email
+                delivery service used to route form submissions to the studio. When you submit
+                a form, your information passes through Resend&rsquo;s servers to deliver the
+                email. Resend&rsquo;s privacy policy is available at{" "}
+                <a
+                  href="https://resend.com/legal/privacy-policy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="link-underline"
+                >
+                  resend.com
+                </a>
+                .
+              </li>
+              <li>
+                <strong className="font-medium text-[#0d253d]">Railway</strong> — the hosting
+                platform where this site runs. Railway may log standard server-side request
+                data (IP address, timestamp, browser type) as part of normal hosting
+                operations.
+              </li>
+              <li>
+                <strong className="font-medium text-[#0d253d]">Spotify &amp; SoundCloud</strong>{" "}
+                — embedded music players on the About and Home pages. If you interact with
+                these players, those platforms may collect data under their own privacy
+                policies. The embeds are loaded from their respective domains.
+              </li>
+            </ul>
+            <p className="mt-3">
+              No analytics platform, advertising network, or tracking pixel is used on this site.
             </p>
           </div>
 
           <div>
             <h2 className="text-lg font-semibold text-[#0d253d]">
-              5. Cookies &amp; analytics
+              5. Cookies
             </h2>
             <p className="mt-2">
-              This site is intentionally lightweight. If analytics or cookies
-              are added in the future, this policy will be updated to describe
-              what is collected and why.
+              This site does not set any first-party cookies. The third-party embeds listed
+              above (Spotify, SoundCloud) may set their own cookies if you interact with them,
+              governed by their respective policies. No cookies are used for tracking or
+              advertising.
             </p>
           </div>
 
@@ -101,54 +153,72 @@ export default function PrivacyPage() {
               6. Data retention
             </h2>
             <p className="mt-2">
-              Submission and project information is retained for as long as
-              needed to communicate with you and deliver your project, and for a
-              reasonable period afterward for record-keeping. You may request
-              deletion of your information at any time (see below).
-            </p>
-          </div>
-
-          <div>
-            <h2 className="text-lg font-semibold text-[#0d253d]">7. Your choices</h2>
-            <p className="mt-2">
-              You can request access to, correction of, or deletion of the
-              personal information you have shared by emailing the studio. You
-              can also decline to provide optional information, though some
-              details may be necessary to quote or complete a project.
+              Information from your submission is retained for as long as needed to complete
+              your project and for a reasonable period afterward for record-keeping — typically
+              up to two years after a project closes. Submissions that don&rsquo;t result in a
+              project are generally not retained beyond the initial correspondence. You may
+              request deletion of your information at any time (see below).
             </p>
           </div>
 
           <div>
             <h2 className="text-lg font-semibold text-[#0d253d]">
-              8. Children&rsquo;s privacy
+              7. Security
             </h2>
             <p className="mt-2">
-              This service is intended for adults. {siteConfig.name} does not
-              knowingly collect personal information from children. If you
-              believe a child has provided information, please contact the
-              studio so it can be removed.
+              Reasonable technical and organisational measures are taken to protect the
+              information you share — including secure HTTPS transmission and access limited
+              to the studio. That said, no method of transmitting or storing data over the
+              internet is completely secure. If you have sensitive materials, you&rsquo;re
+              welcome to reach out by email first and we can arrange a secure transfer method.
             </p>
           </div>
 
           <div>
             <h2 className="text-lg font-semibold text-[#0d253d]">
-              9. Changes to this policy
+              8. Your rights
             </h2>
             <p className="mt-2">
-              This policy may be updated from time to time. Material changes
-              will be reflected by updating the &ldquo;last updated&rdquo; date
-              above.
+              You have the right to request access to, correction of, or deletion of any
+              personal information the studio holds about you. To make a request, email{" "}
+              <a href={`mailto:${siteConfig.email}`} className="link-underline">
+                {siteConfig.email}
+              </a>{" "}
+              and I&rsquo;ll respond promptly. You can also choose not to provide optional
+              information on the submission form, though some details may be necessary to
+              quote or complete your project.
             </p>
           </div>
 
           <div>
-            <h2 className="text-lg font-semibold text-[#0d253d]">10. Contact</h2>
+            <h2 className="text-lg font-semibold text-[#0d253d]">
+              9. Children&rsquo;s privacy
+            </h2>
             <p className="mt-2">
-              For any privacy questions or requests, email{" "}
-              <a
-                href={`mailto:${siteConfig.email}`}
-                className="link-underline"
-              >
+              This service is intended for adults aged 18 and over. {siteConfig.name} does
+              not knowingly collect personal information from anyone under 18. If you believe
+              a minor has submitted information through this site, please contact the studio
+              and it will be removed.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-lg font-semibold text-[#0d253d]">
+              10. Changes to this policy
+            </h2>
+            <p className="mt-2">
+              This policy may be updated from time to time to reflect changes in how the
+              site operates. The &ldquo;last updated&rdquo; date at the top of this page will
+              reflect any changes. Continued use of the site after an update constitutes
+              acceptance of the revised policy.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-lg font-semibold text-[#0d253d]">11. Contact</h2>
+            <p className="mt-2">
+              For any privacy questions, access requests, or deletion requests, email{" "}
+              <a href={`mailto:${siteConfig.email}`} className="link-underline">
                 {siteConfig.email}
               </a>
               .
