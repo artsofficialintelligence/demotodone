@@ -20,9 +20,9 @@ export const faqs: FaqItem[] = [
       "A rough idea is plenty. Some people send finished lyrics and a clear reference track; others send a 20-second hummed voice memo and a feeling they're chasing. Both are great starting points. The submission form has optional fields for lyrics, demos, and voice notes — share whatever you have, and we'll shape the rest together.",
   },
   {
-    question: "Is this AI-generated music?",
+    question: "What does your production process look like?",
     answer:
-      "This is a custom creative service, not a press-a-button generator. I use modern production tools and AI-assisted workflows where they help, but every song is directed, refined, and finished by me around your specific vision. You're hiring a person to craft something for you — not buying output from a machine.",
+      "This is a custom creative service, not an automated generator. I use modern production tools and software to develop, arrange, and shape each track — but every song is personally directed, refined, and finished by me based on your specific vision. You're hiring a person to craft something for you, not buying output from a machine.",
   },
   {
     question: "How much does a custom song cost?",

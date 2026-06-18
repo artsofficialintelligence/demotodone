@@ -8,7 +8,7 @@ export const siteConfig = {
   // Short tagline used in the header / metadata
   tagline: "Custom songs, made from your ideas",
   description:
-    "Demo to Done turns your lyrics, voice notes, demos, and rough ideas into finished, custom songs — AI-produced and personally curated. Submit your idea and start the conversation.",
+    "Demo to Done turns your lyrics, voice notes, demos, and rough ideas into finished, custom songs — professionally produced and personally handled. Submit your idea and start the conversation.",
   // Public URL — also set NEXT_PUBLIC_SITE_URL in your env for SEO metadata.
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://demotodone.com",
   // The public-facing contact email shown on the site.

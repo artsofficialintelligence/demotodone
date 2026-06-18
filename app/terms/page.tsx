@@ -117,11 +117,10 @@ export default function TermsPage() {
               7. Use of production tools
             </h2>
             <p className="mt-2">
-              {siteConfig.name} may use modern production software and
-              AI-assisted workflows as part of the creative process. All
-              creative direction, refinement, and final decisions are made by
-              the studio. You will not receive raw, unedited automated output as
-              a deliverable.
+              {siteConfig.name} uses modern production software and tools
+              as part of the creative process. All creative direction,
+              refinement, and final decisions are made by the studio. You will
+              not receive raw, unedited output as a deliverable.
             </p>
           </div>
 

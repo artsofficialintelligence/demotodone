@@ -49,7 +49,7 @@ const steps = [
   {
     icon: Sparkles,
     title: "Your custom song gets created",
-    body: "I use AI to produce the track, then personally refine every element — arrangement, sound, feel — until it matches your vision. You get a polished, professional result.",
+    body: "I produce and refine every element — arrangement, sound, feel — until it matches your vision. You get a polished, professional result.",
   },
 ];
 
@@ -110,7 +110,7 @@ export default function HomePage() {
             <Reveal>
               <span className="eyebrow">
                 <Sparkles className="h-3.5 w-3.5" />
-                AI-powered · personally curated
+                Custom songs · personally crafted
               </span>
             </Reveal>
             <Reveal delay={80}>
@@ -121,9 +121,9 @@ export default function HomePage() {
             </Reveal>
             <Reveal delay={160}>
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-slate-400">
-                Send your lyrics, demos, voice notes, or rough ideas. I use
-                AI to produce the finished track — then personally shape, refine,
-                and deliver every detail until it&rsquo;s exactly right. Fast,
+                Send your lyrics, demos, voice notes, or rough ideas. I handle
+                the production from start to finish — shaping, refining, and
+                delivering every detail until it&rsquo;s exactly right. Fast,
                 polished, and built around your vision.
               </p>
             </Reveal>
@@ -142,7 +142,7 @@ export default function HomePage() {
               <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-slate-500">
                 <span className="flex items-center gap-2">
                   <span className="h-1.5 w-1.5 rounded-full bg-brand" />
-                  AI-produced, human-curated
+                  Professionally produced
                 </span>
                 <span className="flex items-center gap-2">
                   <span className="h-1.5 w-1.5 rounded-full bg-brand" />

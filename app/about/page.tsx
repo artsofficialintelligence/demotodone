@@ -14,7 +14,7 @@ import { spotifyTracks, soundcloudPlaylist } from "@/lib/work";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Demo to Done is a one-person custom song service. I use AI tools to create polished, finished tracks — guided by your ideas and my ear for what makes a song work.",
+    "Demo to Done is a one-person custom song service. I take your ideas and turn them into polished, finished tracks — guided by your vision and my ear for what makes a song work.",
   alternates: { canonical: "/about" },
 };
 
@@ -63,8 +63,8 @@ export default function AboutPage() {
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-slate-400">
               I understand music — structure, arrangement, what makes something
-              feel right. My production workflow is built on AI, and the results
-              speak for themselves.
+              feel right. I have the background and the tools to bring it to life,
+              and the results speak for themselves.
             </p>
           </Reveal>
         </div>
