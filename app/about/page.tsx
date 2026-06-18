@@ -75,31 +75,25 @@ export default function AboutPage() {
         <Reveal>
           <div className="card p-7 sm:p-9 max-w-3xl">
             <h2 className="text-2xl font-semibold text-white sm:text-3xl">
-              How I work
+              About me
             </h2>
             <div className="mt-5 space-y-4 text-sm leading-relaxed text-slate-400 sm:text-base">
               <p>
-                My background is in songwriting and creative direction — understanding
-                structure, knowing what a lyric needs, hearing when an arrangement
-                serves the song versus when it gets in the way. Whether you bring me
-                a rough demo, a voice memo, a lyric sheet, a melody, or just the spark
-                of an idea, that&rsquo;s the foundation I build from.
+                I have a background in songwriting, production, performing in bands,
+                and audio work. I understand how songs are built, what a lyric needs,
+                and how to shape an arrangement that serves the idea.
               </p>
               <p>
-                To bring it to life, I work with cutting-edge music production
-                technology and AI-assisted creative tools — exploring arrangements,
-                sounds, and melodies to find what fits each project. Every track is
-                carefully guided through a process of selection, refinement, editing,
-                arrangement, and quality control, so what comes out the other end
-                feels intentional and finished, not generated.
+                Whether you bring a rough demo, a voice memo, a lyric sheet, a melody,
+                or just the spark of an idea, that&rsquo;s the foundation I build from.
+                I use modern production tools to develop and refine your ideas into
+                finished songs that feel complete, polished, and true to your vision.
               </p>
               <p>
-                Technology helps me move fast. What doesn&rsquo;t change is the
-                creative judgment — that&rsquo;s entirely mine. I listen to
-                everything you send, shape the direction, make the calls on what
-                sounds right, and keep refining until the track actually matches
-                your vision. From demo to done: turning an unfinished idea into a
-                song worth hearing.
+                The process is guided by experience, instinct, and listening. I shape
+                the production, make the creative decisions, and refine each track until
+                it feels right for you. From demo to done: helping ideas find their
+                final form.
               </p>
             </div>
           </div>
