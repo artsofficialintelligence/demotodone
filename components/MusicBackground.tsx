@@ -6,10 +6,13 @@ export default function MusicBackground({ className = "" }: { className?: string
   const ref = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
-    const canvas = ref.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext("2d");
+    const el = ref.current;
+    if (!el) return;
+    const ctx = el.getContext("2d");
     if (!ctx) return;
+
+    // Capture as non-null for use inside closures
+    const canvas: HTMLCanvasElement = el;
 
     let raf: number;
     let frame = 0;
@@ -24,8 +27,6 @@ export default function MusicBackground({ className = "" }: { className?: string
     ];
 
     function resize() {
-      // Use offsetWidth/offsetHeight — reliable after mount
-      if (!canvas) return;
       const w = canvas.offsetWidth;
       const h = canvas.offsetHeight;
       if (w > 0 && h > 0) {
@@ -53,8 +54,8 @@ export default function MusicBackground({ className = "" }: { className?: string
       ctx.clearRect(0, 0, W, H);
 
       waves.forEach((w) => {
-        const cy  = H * w.y;
-        const amp = H * w.amp;
+        const cy    = H * w.y;
+        const amp   = H * w.amp;
         const phase = frame * w.spd * 0.012;
 
         ctx.beginPath();
