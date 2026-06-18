@@ -197,4 +197,10 @@ export default function PricingPage() {
         </Reveal>
       </section>
 
-      <CTAS
+      <CTASection
+        title="Ready to get a quote?"
+        description="Submit your idea and I'll get back to you with a clear, personalised quote before any work begins."
+      />
+    </>
+  );
+}
