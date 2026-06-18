@@ -15,7 +15,6 @@ export default function MusicBackground({ className = "" }: { className?: string
     if (!el.getContext("2d")) return;
 
     const canvas = el as HTMLCanvasElement;
-    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     const ctx = el.getContext("2d")!;
 
     let raf: number;
