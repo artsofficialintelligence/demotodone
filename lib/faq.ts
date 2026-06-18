@@ -27,7 +27,7 @@ export const faqs: FaqItem[] = [
   {
     question: "How much does a custom song cost?",
     answer:
-      "Pricing depends on the scope — instrumental vs. full vocal production, length, number of revisions, and how finished your starting material is. The Pricing page outlines what each package includes. After you submit your idea, I'll send you a clear, fixed quote before we begin, so there are no surprises.",
+      "Pricing depends on the scope — whether it's a basic idea or full vocal production, instrumental only, song length, and how developed your starting material is. Most projects fall in the $100–$300 range, with simpler ideas on the lower end and more fully produced songs on the higher end. Larger or more complex projects may go beyond that range. After you submit your idea, I'll review it and send a clear quote before any work begins — no surprises.",
   },
   {
     question: "How long does it take?",
@@ -42,7 +42,7 @@ export const faqs: FaqItem[] = [
   {
     question: "Who owns the finished song?",
     answer:
-      "That's covered in the agreement we'll confirm over email before starting, and it depends on your package and intended use (personal gift vs. commercial release). My goal is for you to walk away with clear, written terms about usage rights for your finished song. See the Terms page for the general framework.",
+      "You will receive full usage rights to the finished song once the project is complete and fully paid. In most cases, this includes the right to use, share, and release the song for personal or commercial purposes depending on your package. However, final rights may also be influenced by the specific tools and platforms used in the creation process — any relevant third-party licensing terms will be respected and applied where required. I retain credit for my role in the writing, production, and arrangement (for example: \"written/produced by…\") unless otherwise agreed in writing. Specific usage rights will always be confirmed before the project begins.",
   },
   {
     question: "Can you write the lyrics for me?",
