@@ -9,6 +9,7 @@ import {
 import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
+import MusicBackground from "@/components/MusicBackground";
 import SpotifyGrid from "@/components/SpotifyGrid";
 import { spotifyTracks, soundcloudPlaylist } from "@/lib/work";
 
@@ -51,6 +52,7 @@ export default function AboutPage() {
           aria-hidden
           className="pointer-events-none absolute inset-0 bg-hero-mesh opacity-70"
         />
+        <MusicBackground className="opacity-70" />
         <div className="container-page relative py-20 sm:py-28">
           <Reveal className="max-w-3xl">
             <span className="eyebrow">

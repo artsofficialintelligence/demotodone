@@ -3,6 +3,7 @@ import { Sparkles } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import FaqAccordion from "@/components/FaqAccordion";
 import CTASection from "@/components/CTASection";
+import MusicBackground from "@/components/MusicBackground";
 import { faqs } from "@/lib/faq";
 
 export const metadata: Metadata = {
@@ -36,6 +37,7 @@ export default function FaqPage() {
           aria-hidden
           className="pointer-events-none absolute inset-0 bg-hero-mesh opacity-70"
         />
+        <MusicBackground className="opacity-70" />
         <div className="container-page relative py-20 text-center sm:py-24">
           <Reveal className="mx-auto max-w-2xl items-center">
             <span className="eyebrow">

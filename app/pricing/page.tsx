@@ -4,6 +4,7 @@ import { ArrowRight, Check, Sparkles, MessageSquareQuote } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
+import MusicBackground from "@/components/MusicBackground";
 
 export const metadata: Metadata = {
   title: "Pricing & Packages",
@@ -81,6 +82,7 @@ export default function PricingPage() {
           aria-hidden
           className="pointer-events-none absolute inset-0 bg-hero-mesh opacity-70"
         />
+        <MusicBackground className="opacity-70" />
         <div className="container-page relative py-20 text-center sm:py-24">
           <Reveal className="mx-auto max-w-2xl items-center">
             <span className="eyebrow">

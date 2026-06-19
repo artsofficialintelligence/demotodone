@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Upload, Eye, MessagesSquare, Sparkles, Lock } from "lucide-react";
 import Reveal from "@/components/Reveal";
 import SubmitForm from "@/components/SubmitForm";
+import MusicBackground from "@/components/MusicBackground";
 
 export const metadata: Metadata = {
   title: "Submit Your Song Idea",
@@ -25,6 +26,7 @@ export default function SubmitPage() {
           aria-hidden
           className="pointer-events-none absolute inset-0 bg-hero-mesh opacity-70"
         />
+        <MusicBackground className="opacity-70" />
         <div className="container-page relative py-16 text-center sm:py-20">
           <Reveal className="mx-auto max-w-2xl items-center">
             <span className="eyebrow">
